@@ -1,0 +1,24 @@
+--- libruin-0.2.0/examples/Makefile.am.orig	2010-12-31 21:37:15.000000000 +0100
++++ libruin-0.2.0/examples/Makefile.am	2013-07-26 21:47:47.695325332 +0200
+@@ -1,8 +1,9 @@
+ noinst_PROGRAMS = ruinview
+ ruinview_SOURCES = ruinview.c
++ruinview_LDADD = $(top_builddir)/src/libruin.la
+ INCLUDES = -I../src
+ 
+ AM_CFLAGS = @CFLAGS@ @GUILE_CFLAGS@ @GLIB_CFLAGS@
+-AM_LDFLAGS = @LDFLAGS@ @GUILE_LIBS@ @GLIB_LIBS@ -lruin
++AM_LDFLAGS = @LDFLAGS@ @GUILE_LIBS@ @GLIB_LIBS@
+ 
+ dist_noinst_DATA = css21-conformance-uris.txt
+--- libruin-0.2.0/src/Makefile.am.orig	2011-09-19 00:21:05.000000000 +0200
++++ libruin-0.2.0/src/Makefile.am	2013-07-26 22:00:16.501960592 +0200
+@@ -1,6 +1,7 @@
+ SUBDIRS = tests
+ 
+-nobase_dist_pkglib_DATA = scheme/scss/common.scm scheme/scss/lexer.scm \
++pkgdatadir = $(pkglibdir)
++nobase_dist_pkgdata_DATA = scheme/scss/common.scm scheme/scss/lexer.scm \
+ 	scheme/scss/parser.scm scheme/scss/properties.scm scheme/scss/scss.scm \
+ 	scheme/scss/interface/sdom.scm \
+ 	scheme/sdom/common.scm scheme/sdom/core.scm scheme/sdom/events.scm \

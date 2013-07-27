@@ -1,0 +1,14 @@
+--- libruin-0.2.0/doc/libruin.texi.orig	2010-12-31 19:38:42.000000000 +0100
++++ libruin-0.2.0/doc/libruin.texi	2013-07-26 22:06:17.698612102 +0200
+@@ -21,9 +21,9 @@
+ @end quotation
+ @end copying
+      
+-@dircategory Development
++@dircategory Libraries:
+ @direntry
+-* libRUIN: (libruin).	libRUIN, Renderer for User Interfaces in Ncurses
++* libRUIN: (libruin).			libRUIN, Renderer for User Interfaces in Ncurses
+ @end direntry
+ 
+ @titlepage
